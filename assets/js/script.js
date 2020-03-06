@@ -111,7 +111,7 @@ ready(() => {
 });
 
 ready(() => {
-    $('#phone-mask').mask("+998(00) 000-00-00");
+    $('.phone-mask').mask("+998(00) 000-00-00");
 
     const openModal = () => {
         $('.complete-modal').addClass('active');
@@ -128,6 +128,19 @@ ready(() => {
         .done(function () {
             openModal();
             document.getElementById('myform').reset();
+        });
+    });
+
+    $('.form-modal form').submit((e) => {
+        e.preventDefault();
+        $.ajax({
+            method: "POST",
+            url: "../../send.php",
+            data: $('#myform').serialize(),
+        })
+        .done(function () {
+            $('.form-modal form').reset();
+            alert(1)
         });
     });
 });
@@ -148,4 +161,28 @@ ready(() => {
         '#42B2F4',
     ], 10);
 
+});
+
+ready(() => {
+    const modalToggle = (modalclass, btnclass) => {
+        const
+            modal = document.querySelector(modalclass),
+            closeBtn = document.querySelector(`${modalclass} .close-btn`),
+            modalbg = document.querySelector(`${modalclass} .modal-background`),
+            btn = document.querySelectorAll(btnclass);
+
+        btn.forEach(one => {
+            one.addEventListener('click', () => {
+                modal.classList.add('active');
+            });
+        });
+
+        [closeBtn, modalbg].forEach(one => {
+            one.addEventListener('click', () => {
+                modal.classList.remove('active');
+            });
+        });
+    }
+
+    modalToggle('.form-modal', '.open-form-modal');
 });

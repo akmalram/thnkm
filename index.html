@@ -43,6 +43,19 @@
             </div>
         </div>
     </div>
+    <div class="form-modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <div class="close-btn">+</div>
+            <h2 class="modal-heading">Оставьте заявку</h2>
+            <form>
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="text" name="phone"  class="phone-mask" placeholder="Ваш телефон" required>
+                <input type="hidden" name="hidden" value="SMM">
+                <button type="submit" class="submit-btn btn-primary">Отправить</button>
+            </form>
+        </div>
+    </div>
     <header>
         <nav class="navbar">
             <div class="navbar-container">
@@ -97,7 +110,7 @@
                 </div>
                 <h1 class="page-title">SMM - спецалист</h1>
                 <p class="page-desc">Научитесь одной из самых востребованных профессий на реальных проектах</p>
-                <a href="#" class="btn-primary">Оставить заявку</a>
+                <a class="btn-primary open-form-modal">Оставить заявку</a>
                 <div class="infos">
                     <ul>
                         <li>
@@ -547,7 +560,7 @@
                     <form class="contacts-form" id="myform" data-aos="fade-up">
                         <h3 class="title-tertiary">Оставить заявку</h3>
                         <input type="text" name="name" placeholder="Ваше имя" class="input" required>
-                        <input type="tel" name="phone" placeholder="Ваш телефон" id="phone-mask" class="input" required>
+                        <input type="tel" name="phone" placeholder="Ваш телефон" class="phone-mask" class="input" required>
                         <input type="hidden" name="hidden" value="SMM">
                         <button type="submit" class="btn-primary">Записаться</button>
                     </form>
