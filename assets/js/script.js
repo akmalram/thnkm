@@ -10,7 +10,7 @@ ready(() => {
         const menu = $('.navbar .mymenu');
 
         btn.click(() => {
-            menu.classList.toggle('active');
+            menu.toggleClass('active');
         });
     }
 
@@ -132,3 +132,20 @@ ready(() => {
     });
 });
 
+ready(() => {
+    function gradientSpinner(targetElementSelector = 'body', colorsArr = ['#283048','#859398'], time = 30) {
+        let degs = 0;
+
+        setInterval(() => {
+            if(degs > 360) degs = 0;
+            degs++;
+            const el = document.querySelector(targetElementSelector);
+            el.style.background = `linear-gradient( ${degs}deg, ${colorsArr.join(', ')})`;
+        }, time * 1000 / 360)
+    }
+    gradientSpinner('header', [
+        '#FAB4C2',
+        '#42B2F4',
+    ], 10);
+
+});
