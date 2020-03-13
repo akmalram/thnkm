@@ -186,3 +186,27 @@ ready(() => {
 
     modalToggle('.form-modal', '.open-form-modal');
 });
+
+ready(() => {
+    const titles = document.querySelectorAll(".title-animated span");
+
+    titles.forEach(one => {
+        const pageY = window.innerHeight * .75;
+
+        const theHeight = window.scrollY + pageY;
+
+        if(theHeight > getCoords(one).top) {
+            one.classList.add('open');
+        }
+
+        window.addEventListener('scroll', () => {
+            const pageY = window.innerHeight * .75;
+
+            const theHeight = window.scrollY + pageY;
+
+            if(theHeight > getCoords(one).top) {
+                one.classList.add('open');
+            }
+        })
+    });
+});
