@@ -6,6 +6,50 @@ main {
     padding: 40px 0;
 }
 
+.swiper-pagination-bullets {
+    bottom: 0 !important;
+}
+
+.contact-widget {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: #fff;
+    display: none;
+    justify-content: space-around;
+    padding: 15px 7px;
+    box-sizing: border-box;
+    z-index: 100;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.16);
+
+    @include sm-block {
+        display: flex;
+    }
+
+    .phone, .telegram {
+        a {
+            border: 2px solid #319559;
+            padding: 3px 5px;
+            display: inline-block;
+            background-color: #319559;
+            border-radius: 3px;
+            color: #fff;
+            @include pulse(#319559, 10, phone);
+        }
+    }
+
+    .telegram {
+        a {
+            background-color: #00AFEF;
+            border-color: #00AFEF;
+            @include pulse(#00AFEF, 10, telegram);
+
+        }
+    }
+}
+
 .swiper-pagination-bullet-active {
     background: #000;
 }
@@ -45,6 +89,11 @@ main {
     .right {
         @include size(10);
         @include size-sm(24);
+    }
+
+
+    .swiper-slide {
+        padding-bottom: 20px;
     }
 
     .tab-buttons {
@@ -489,7 +538,7 @@ main {
 
             @include sm-block {
                 padding-left: 10px;
-                font-size: 14px;
+                font-size: 12px;
             }
         }
 

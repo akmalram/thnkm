@@ -10,9 +10,9 @@
     <meta property="og:site_name" content="Курс по SMM | Tehnikum Scholl">
     <meta property="og:title" content="Курс по SMM">
     <meta property="og:description" content="Научитесь одной из самых востребованных профессий на реальных проектах">
-    <meta property="og:url" content="http://example.com/page.html">
+    <!-- <meta property="og:url" content="http://example.com/page.html"> -->
     <meta property="og:locale" content="ru_RU">
-    <meta property="og:image" content="http://example.com/img.jpg">
+    <!-- <meta property="og:image" content="http://example.com/img.jpg"> -->
     <meta property="og:image:width" content="200">
     <meta property="og:image:height" content="200">
 
@@ -34,6 +34,14 @@
 </head>
 
 <body>
+    <div class="contact-widget">
+        <div class="phone">
+            <a href="tel:+998919999999"><i class="fas fa-phone"></i> Позвонить</a>
+        </div>
+        <div class="telegram">
+            <a href="https://t.me/"><i class="fab fa-telegram"></i> Телеграм</a>
+        </div>
+    </div>
     <div class="complete-modal">
         <div class="modal-background"></div>
         <div class="modal-content">
@@ -50,10 +58,19 @@
             <h2 class="modal-heading">Оставьте заявку</h2>
             <form>
                 <input type="text" name="name" placeholder="Ваше имя" required>
-                <input type="text" name="phone"  class="phone-mask" placeholder="Ваш телефон" required>
+                <input type="tel" name="phone"  class="phone-mask" placeholder="Ваш телефон" required>
                 <input type="hidden" name="hidden" value="SMM">
                 <button type="submit" class="submit-btn btn-primary">Отправить</button>
             </form>
+            <div class="done">
+                <div class="animated-svg">
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 98.5 98.5" enable-background="new 0 0 98.5 98.5" xml:space="preserve">
+                        <path class="checkmark" fill="none" stroke-width="8" stroke-miterlimit="10" d="M81.7,17.8C73.5,9.3,62,4,49.2,4
+                        C24.3,4,4,24.3,4,49.2s20.3,45.2,45.2,45.2s45.2-20.3,45.2-45.2c0-8.6-2.4-16.6-6.5-23.4l0,0L45.6,68.2L24.7,47.3"/>
+                    </svg>
+                </div>
+                <h3>Ваша заявка отправлена</h3>
+            </div>
         </div>
     </div>
     <header>
@@ -117,28 +134,24 @@
                             <span class="icon"><i class="fab fa-buffer"></i></span>
                             <div>
                                 <h4>Формат</h4>
-                                <p>лекции с теорией и практика на реальных кейсах</p>
                             </div>
                         </li>
                         <li>
                             <span class="icon"><i class="fas fa-calendar-alt"></i></span>
                             <div>
                                 <h4>Когда</h4>
-                                <p>14 февраля - 14 марта. <br> Набор стартует за месяц до начала</p>
                             </div>
                         </li>
                         <li>
                             <span class="icon"><i class="fas fa-graduation-cap"></i></span>
                             <div>
                                 <h4>Документ</h4>
-                                <p>Котирующийся сертификат, подтвержденный эксертами в области</p>
                             </div>
                         </li>
                         <li>
                             <span class="icon"><i class="fas fa-check-circle"></i></span>
                             <div>
                                 <h4>Уровень</h4>
-                                <p>начальный</p>
                             </div>
                         </li>
                     </ul>
@@ -229,7 +242,7 @@
                         <input type="checkbox" id="program-checkbox-1">
                         <label for="program-checkbox-1">
                             <span>Стратегия</span>
-                            <span><i class="fas fa-chevron-left"></i></span>
+                            <span><i class="fas fa-chevron-right"></i></span>
                         </label>
                         <div class="content">
                             <ul>
@@ -249,7 +262,7 @@
                         <input type="checkbox" id="program-checkbox-2">
                         <label for="program-checkbox-2">
                             <span>Контент</span>
-                            <span><i class="fas fa-chevron-left"></i></span>
+                            <span><i class="fas fa-chevron-right"></i></span>
                         </label>
                         <div class="content">
                             <ul>
@@ -269,7 +282,7 @@
                         <input type="checkbox" id="program-checkbox-3">
                         <label for="program-checkbox-3">
                             <span>Основы таргетинга</span>
-                            <span><i class="fas fa-chevron-left"></i></span>
+                            <span><i class="fas fa-chevron-right"></i></span>
                         </label>
                         <div class="content">
                             <ul>
@@ -289,7 +302,7 @@
                         <input type="checkbox" id="program-checkbox-4">
                         <label for="program-checkbox-4">
                             <span>Проджект менеджмент</span>
-                            <span><i class="fas fa-chevron-left"></i></span>
+                            <span><i class="fas fa-chevron-right"></i></span>
                         </label>
                         <div class="content">
                             <ul>
@@ -309,7 +322,7 @@
                         <input type="checkbox" id="program-checkbox-6">
                         <label for="program-checkbox-6">
                             <span>Трудоустройство</span>
-                            <span><i class="fas fa-chevron-left"></i></span>
+                            <span><i class="fas fa-chevron-right"></i></span>
                         </label>
                         <div class="content">
                             <ul>
@@ -329,7 +342,7 @@
                         <input type="checkbox" id="program-checkbox-7">
                         <label for="program-checkbox-7">
                             <span>Защита проекта</span>
-                            <span><i class="fas fa-chevron-left"></i></span>
+                            <span><i class="fas fa-chevron-right"></i></span>
                         </label>
                         <div class="content">
                             <ul>
@@ -560,12 +573,11 @@
                     <form class="contacts-form" id="myform" data-aos="fade-up">
                         <h3 class="title-tertiary">Оставить заявку</h3>
                         <input type="text" name="name" placeholder="Ваше имя" class="input" required>
-                        <input type="tel" name="phone" placeholder="Ваш телефон" class="phone-mask" class="input" required>
+                        <input type="tel" name="phone" placeholder="Ваш телефон" class="input phone-mask" required>
                         <input type="hidden" name="hidden" value="SMM">
                         <button type="submit" class="btn-primary">Записаться</button>
                     </form>
-                    <br>
-                    <div class="text-center">
+                    <div class="text-center" style="display: none;">
                         <p>Made with <i class="fas fa-heart"> by <a href="https://premium.uz/" style="color: #333333; font-size: 20px; font-family: 'Apercu Pro', sans-serif;">Premium Digital</a></i></p>
                     </div>
                     <div class="socials">
@@ -577,9 +589,7 @@
                 </div>
                 <div class="right">
                     <div class="map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96764.76132053095!2d-73.99776980316916!3d40.72024444954617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24416947c2109%3A0x82765c7404007886!2sBrooklyn%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1581314724778!5m2!1sen!2s"
-                            frameborder="0" allowfullscreen=""></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96764.76132053095!2d-73.99776980316916!3d40.72024444954617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24416947c2109%3A0x82765c7404007886!2sBrooklyn%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1581314724778!5m2!1sen!2s" frameborder="0" allowfullscreen=""></iframe>
                     </div>
                 </div>
             </div>

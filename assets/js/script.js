@@ -136,11 +136,11 @@ ready(() => {
         $.ajax({
             method: "POST",
             url: "../../send.php",
-            data: $('#myform').serialize(),
+            data: $('.form-modal form').serialize(),
         })
         .done(function () {
-            $('.form-modal form').reset();
-            alert(1)
+            document.querySelector('.form-modal form').reset();
+            $('.form-modal').addClass('done');
         });
     });
 });

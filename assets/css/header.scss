@@ -132,7 +132,7 @@
             right: 0;
             width: 100%;
             height: 100vh;
-            background-color: #0000008f;
+            background-color: #000000a6;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -328,16 +328,18 @@ header {
 
     .infos {
         margin-top: 150px;
+        text-align: left;
 
         @include md-block {
-            margin-top: 100px;
+            margin-top: 50px;
         }
-        text-align: left;
+
 
         ul {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            text-align: center;
 
             li {
                 @include size(6);
@@ -345,14 +347,11 @@ header {
 
                 position: relative;
                 box-sizing: border-box;
-                display: flex;
 
                 .icon {
                     font-size: 50px;
                     display: block;
                     margin-right: 5px;
-
-                    @include sm(display, none);
                 }
 
                 @include sm-block {
@@ -400,6 +399,17 @@ header {
         }
     }
 
+    &.done {
+        form,
+        .modal-heading {
+            display: none;
+        }
+
+        .done {
+            display: block;
+        }
+    }
+
     .modal-background {
         position: absolute;
         top: 0;
@@ -413,6 +423,42 @@ header {
         z-index: 115;
     }
 
+    .done {
+        transition: all .2s ease;
+        display: none;
+
+        .animated-svg {
+            width: 200px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+
+            @include xs-block {
+                width: 100px;
+            }
+        }
+
+        .checkmark {
+            stroke: #49c549;
+            stroke-dashoffset: 745.74853515625;
+            stroke-dasharray: 745.74853515625;
+            animation: dash 2s ease-out forwards 1;
+          }
+
+          @keyframes dash {
+            0% {
+              stroke-dashoffset: 745.74853515625;
+            }
+            100% {
+              stroke-dashoffset: 0;
+            }
+          }
+
+          h3 {
+              font-size: 30px;
+          }
+    }
+
+
     .modal-content {
         position: absolute;
         z-index: 120;
@@ -421,12 +467,28 @@ header {
         transform: translate(-50%, -50%) scale(.9);
         box-sizing: border-box;
         width: 500px;
+        max-width: 95%;
+        height: 400px;
         padding: 40px 40px;
         background-color: #fff;
         text-align: center;
         border-radius: 18px;
         transition: all .3s ease;
         visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+
+        @include md-block {
+            height: 300px;
+        }
+
+        @include md-block {
+            height: 270px;
+            padding: 20px;
+        }
 
         .close-btn {
             position: absolute;
@@ -451,6 +513,12 @@ header {
     .modal-heading {
         font-size: 35px;
         margin-bottom: 20px;
+
+        @include md-block {
+            font-size: 30px;
+            margin-bottom: 0;
+        }
+
     }
 
     form {
@@ -466,6 +534,12 @@ header {
             padding: 0 22px;
             margin-bottom: 30px;
             box-sizing: border-box;
+
+            @include md-block {
+                margin-bottom: 20px;
+                height: 45px;
+                padding: 0 5px;
+            }
 
             &:focus,
             &:hover {
