@@ -1,0 +1,51 @@
+@mixin content-padding {
+    padding: 80px 0;
+
+    @media only screen and (max-width: 768px) {
+        padding: 60px 0;
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 30px 0;
+    }
+}
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin pulse($pulse, $width, $id) {
+    animation: pulse-#{$id} 2s linear infinite;
+
+
+    @keyframes pulse-#{$id} {
+        0% {
+            box-shadow: 0 0 0 0 rgba($pulse, .8);
+        }
+
+        20% {
+            transform: scale(1.05);
+        }
+
+        27% {
+            transform: scale(1);
+        }
+
+        40% {
+            box-shadow: 0 0 0px #{$width / 2}px rgba($pulse, .5);
+
+        }
+
+        80% {
+            box-shadow: 0 0 3px #{$width}px rgba($pulse, 0);
+
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 rgba($pulse, 0);
+        }
+    }
+}

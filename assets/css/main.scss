@@ -69,6 +69,10 @@ main {
     }
 }
 
+.swiper-slide {
+    padding-bottom: 20px;
+}
+
 .about {
     @include content-padding();
 
@@ -89,11 +93,6 @@ main {
     .right {
         @include size(10);
         @include size-sm(24);
-    }
-
-
-    .swiper-slide {
-        padding-bottom: 20px;
     }
 
     .tab-buttons {

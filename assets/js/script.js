@@ -4,6 +4,15 @@ const ready = (callback) => {
     })
 }
 
+function getCoords(elem) { // кроме IE8-
+    let box = elem.getBoundingClientRect();
+
+    return {
+      top: box.top + pageYOffset,
+      left: box.left + pageXOffset
+    };
+}
+
 ready(() => {
     const MenuClassToggler = () => {
         const btn = $('.toggle-btn input');
